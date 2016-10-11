@@ -7,5 +7,5 @@ def front_page(request):
 		Page_url = []
 		for i in range(1 + ((5 * page_number) - 5), (5 * page_number) + 1):
 			get_page = session.query(web_db).filter_by(id=i).one()
-			Page_url.append(get_page.peb_url)
+			Page_url.append(get_page)
 		return Page_url
