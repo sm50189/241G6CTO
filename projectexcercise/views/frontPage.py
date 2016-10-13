@@ -18,8 +18,11 @@ def front_page(request):
 	def return_page(session, page_number):
 		Page_url = []
 		for i in range(1 + ((5 * page_number) - 5), (5 * page_number) + 1):
-			get_page = session.query(Project).filter_by(id=i).one()
-			Page_url.append(get_page)
+			try:
+				get_page = session.query(Project).filter_by(id=i).one()
+				Page_url.append(get_page)
+			except NoResultFound:
+				break
 		return Page_url
 
 	Page = return_page(session , int(page_number))
