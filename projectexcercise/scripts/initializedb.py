@@ -16,7 +16,8 @@ from ..models.meta import Base
 from ..models import (
     get_session
     )
-from ..models import MyModel
+from ..models import Project
+from ..models import User
 
 
 def usage(argv):
@@ -38,9 +39,14 @@ def main(argv=sys.argv):
     Base.metadata.create_all(engine)
 
     maker = sessionmaker()
+    maker.configure(bind=engine)
 
     with transaction.manager:
         session = get_session(maker, transaction.manager)
 
-        model = MyModel(name='one', value=1)
-        session.add(model)
+        dummy_User = User(first_name = 'dummy', last_name = 'dummy', password ='dummy',stu_id = 00000)
+
+        dummy_project = Project(title = 'dummy',description ='dummy',status ='dummy',owner_id =00000)
+
+        session.add(dummy_project)
+        session.add(dummy_User)

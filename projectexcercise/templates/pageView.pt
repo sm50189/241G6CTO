@@ -1,0 +1,26 @@
+﻿<html>
+<head>
+	<title>${Page.title}</title>
+</head>
+<body bgcolor="orange" text="black">
+<br>
+<h4><p align="center" >ข้อมูลโครงการ</p></h4>
+<table align="center" border="1" width="65%" bgcolor="#FFFF99" cellpadding="10">
+	<tr>
+		<td><b><p align="left">ชื่อโครงการ</p></b></td>
+		<td><b><p align="left">${Page.title}</p></b></td>
+	</tr>
+	<tr>
+		<td><b><p align="left">คำอธิบายโปรเจค ^^</p></b></td>
+		<td><b><p align="left">${Page.description}</p></b></td>
+	</tr>
+	<tr>
+		<td><b><p align="left">ประธานโครงการ</p></b></td>
+		<td><b><p align="left">${Page.description}</p></b></td>
+	</tr>
+	<tr>
+		<td><b><p align="left">สถานะโครงการ</p></b></td>
+		<td><b><p align="left">${Page.status}</p></b></td>
+	</tr>
+</table>
+</html>

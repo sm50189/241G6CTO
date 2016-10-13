@@ -1,0 +1,22 @@
+﻿<html>
+<head>
+	<title>${request.matchdict['page_number']}</title>
+</head>
+<body bgcolor="orange" text="black">
+<br>
+<li tal:repeat="page Pages">
+	<table align="center" border="1" width="65%" bgcolor="#FFFF99" >
+		<tr><th><a href="${request.route_url('pageView',id_project=page.id)}"> 
+					${page.title} 
+		</a></th></tr>
+		<tr>
+			<td align="center" >
+				<br border=4>
+				<br><p><image src="${request.static_url('projectexcercise:static/pyramid.png')}" width="200" height="150" border="1" align="center" align="center"></image></p>
+			</td>
+		</tr>
+	</table>
+</li>
+</br>
+</body>
+</html>
