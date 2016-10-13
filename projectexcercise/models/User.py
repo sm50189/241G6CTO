@@ -17,4 +17,4 @@ class User(Base):
 	stu_id = Column(Integer)
 	
 	def change_password(self, new_password):
-		self.password = password
+		self.password = new_password

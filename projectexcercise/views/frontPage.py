@@ -3,6 +3,7 @@ from pyramid.httpexceptions import (
     HTTPFound,
     HTTPNotFound,
     )
+from ..models.Project import Project
 
 @view_config(route_name = 'frontPage')
 def go_to_home_page(request):
@@ -17,7 +18,7 @@ def front_page(request):
 	def return_page(session, page_number):
 		Page_url = []
 		for i in range(1 + ((5 * page_number) - 5), (5 * page_number) + 1):
-			get_page = session.query(web_db).filter_by(id=i).one()
+			get_page = session.query(Project).filter_by(id=i).one()
 			Page_url.append(get_page)
 		return Page_url
 
