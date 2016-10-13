@@ -19,5 +19,5 @@ class Project(Base):
 	def change_status(self, st):
 		self.status = st
 		
-	def change_describ(self, des)
+	def change_describ(self, des):
 		self.description = des
