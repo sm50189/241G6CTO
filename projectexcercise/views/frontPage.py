@@ -1,4 +1,5 @@
 from pyramid.view import view_config
+from sqlalchemy.orm.exc import NoResultFound
 from pyramid.httpexceptions import (
     HTTPFound,
     HTTPNotFound,
@@ -26,4 +27,5 @@ def front_page(request):
 		return Page_url
 
 	Page = return_page(session , int(page_number))
-	return {'Pages',Page}
+	print '\n\n\n\n\n\n Page **********************************************************************************88\n\n\n\n\n'
+	return dict(Pages= Page) 

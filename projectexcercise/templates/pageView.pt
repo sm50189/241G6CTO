@@ -11,7 +11,7 @@
 		<td><b><p align="left">${Page.title}</p></b></td>
 	</tr>
 	<tr>
-		<td><b><p align="left">คำอธิบายโปรเจค</p></b></td>
+		<td><b><p align="left">คำอธิบายโปรเจค ^^</p></b></td>
 		<td><b><p align="left">${Page.description}</p></b></td>
 	</tr>
 	<tr>
