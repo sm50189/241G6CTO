@@ -39,6 +39,7 @@ def main(argv=sys.argv):
     Base.metadata.create_all(engine)
 
     maker = sessionmaker()
+    maker.configure(bind=engine)
 
     with transaction.manager:
         session = get_session(maker, transaction.manager)

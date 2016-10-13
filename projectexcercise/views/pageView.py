@@ -1,7 +1,7 @@
 from pyramid.view import view_config
 from ..models.Project import Project
 
-@view_config(renderer = '../templates/frontpage.pt', route_name= 'feedpage')
+@view_config(renderer = '../templates/pageView.pt', route_name= 'pageView')
 def page_view(request):
 	session = request.db_session
 	project_id = request.matchdict['id_project']
